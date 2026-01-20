@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: dp-web-mgmt
+spec:
+  to:
+    kind: Service
+    name: dp-mgmt
+  port:
+    targetPort: web-mgmt
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: Redirect
