@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: datapower-gitops-helloworld
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/brendon-stephens/datapower-ocp-gitops-helloworld.git
+    targetRevision: main
+    path: datapower/base
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: datapower-gitops
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
