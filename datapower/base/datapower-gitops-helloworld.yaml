@@ -19,4 +19,4 @@ spec:
       name: admin
       passwordSecret: user-password-admin
   version: 10.6.1.0
-  replicas: 1
+  replicas: 3
