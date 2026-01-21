@@ -1,0 +1,21 @@
+nameReference:
+  - kind: Secret
+    fieldSpecs:
+      - path: spec/domains/dpApp/local
+        kind: DataPowerService
+        group: datapower.ibm.com
+        version: v1beta3
+      - path: spec/domains/dpApp/config
+        kind: DataPowerService
+        group: datapower.ibm.com
+        version: v1beta3
+  - kind: ConfigMap
+    fieldSpecs:
+      - path: spec/domains/dpApp/local
+        kind: DataPowerService
+        group: datapower.ibm.com
+        version: v1beta3
+      - path: spec/domains/dpApp/config
+        kind: DataPowerService
+        group: datapower.ibm.com
+        version: v1beta3
