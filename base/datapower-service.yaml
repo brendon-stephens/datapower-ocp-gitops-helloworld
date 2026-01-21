@@ -16,8 +16,8 @@ spec:
   domains:
     - name: default
       dpApp:
-        #local:
-        #  - fs-local-default
+        local:
+          - fs-local-default
         config:
           - mgmt-config
 
