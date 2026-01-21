@@ -10,3 +10,8 @@ resources:
   - route-xml-mgmt.yaml
 
   - cm-mgmt-config.yaml
+
+configMapGenerator:
+  - name: fs-local-default
+    files:
+      - files/default/local/identity.xsl
