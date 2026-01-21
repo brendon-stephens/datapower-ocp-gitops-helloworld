@@ -8,3 +8,5 @@ resources:
   - route-rest-mgmt.yaml
   - route-web-mgmt.yaml
   - route-xml-mgmt.yaml
+
+  - cm-mgmt-config.yaml

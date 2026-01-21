@@ -12,6 +12,13 @@ spec:
     - accessLevel: privileged
       name: admin
       passwordSecret: user-password-admin
+
+  domains:
+    - name: default
+      dpApp:
+        config:
+          - mgmt-config
+
   resources:
     limits:
       cpu: '1'
