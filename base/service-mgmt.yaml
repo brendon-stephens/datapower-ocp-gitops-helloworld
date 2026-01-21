@@ -4,7 +4,7 @@ metadata:
   name: mgmt
 spec:
   selector:
-    app.kubernetes.io/instance: datapower-gitops-datapower-gitops-helloworld
+    app.kubernetes.io/instance: datapower-gitops-datapower-gateway
   ports:
     - name: ssh-mgmt
       protocol: TCP
