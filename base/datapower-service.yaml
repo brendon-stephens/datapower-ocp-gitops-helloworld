@@ -1,12 +1,17 @@
 apiVersion: datapower.ibm.com/v1beta3
 kind: DataPowerService
 metadata:
-  name: datapower-gitops-helloworld
+  name: datapower-gateway
 spec:
+  version: 10.6.1.0
   license:
     accept: true
     license: L-TQPQ-FUUQU4
     use: developers-limited
+  users:
+    - accessLevel: privileged
+      name: admin
+      passwordSecret: user-password-admin
   resources:
     limits:
       cpu: '1'
@@ -14,9 +19,4 @@ spec:
     requests:
       cpu: '1'
       memory: 4Gi
-  users:
-    - accessLevel: privileged
-      name: admin
-      passwordSecret: user-password-admin
-  version: 10.6.1.0
   replicas: 3

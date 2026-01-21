@@ -1,13 +1,13 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: dp-xml-mgmt
+  name: rest-mgmt
 spec:
   to:
     kind: Service
-    name: dp-mgmt
+    name: mgmt
   port:
-    targetPort: xml-mgmt
+    targetPort: rest-mgmt
   tls:
     termination: passthrough
     insecureEdgeTerminationPolicy: Redirect
