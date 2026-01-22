@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: datapower
+  name: apiconnect
   namespace: openshift-gitops
 spec:
   project: default
   sources:
     - repoURL: https://github.com/brendon-stephens/datapower-ocp-gitops-helloworld.git
       targetRevision: main
-      path: datapower/base
+      path: apiconnect/base
   destination:
     server: https://kubernetes.default.svc
     namespace: datapower-gitops

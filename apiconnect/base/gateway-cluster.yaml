@@ -1,0 +1,47 @@
+apiVersion: gateway.apiconnect.ibm.com/v1beta1
+kind: GatewayCluster
+metadata:
+  name: gwv6
+  labels:
+    app.kubernetes.io/instance: gateway
+    app.kubernetes.io/managed-by: ibm-apiconnect
+    app.kubernetes.io/name: gwv6
+  annotations:
+    apiconnect-operator/cp4i: "false"
+spec:
+  version: 10.0.8.2-ifix2
+  profile: n3xc4.m8
+  apicGatewayServiceV5CompatibilityMode: false
+  mgmtPlatformEndpointCASecret:
+    secretName: ingress-ca
+  mgmtPlatformEndpointSvcCASecret:
+    secretName: management-ca
+  gatewayEndpoint:
+    annotations:
+      cert-manager.io/issuer: ingress-issuer
+    hosts:
+    - name: rgw.datapower-sandbox.local
+      secretName: gwv6-endpoint
+  gatewayManagerEndpoint:
+    annotations:
+      cert-manager.io/issuer: ingress-issuer
+    hosts:
+    - name: rgwd.datapower-sandbox.local
+      secretName: gwv6-manager-endpoint
+  apicGatewayServiceTLS:
+    secretName: gateway-service
+  apicGatewayPeeringTLS:
+    secretName: gateway-peering
+  datapowerLogLevel: 3
+  license:
+    accept: true
+    use: nonproduction
+    license: L-JVUW-LSTB9R
+  tokenManagementService:
+    enabled: true
+    storage:
+      storageClassName: local-sc
+      volumeSize: 30Gi
+  adminUser:
+    secretName: admin-secret
+  mtlsValidateClient: true
