@@ -36,7 +36,7 @@ spec:
   license:
     accept: true
     use: nonproduction
-    license: L-XSJQ-UMJP6P
+    license: L-FTGN-WUM5C5
   tokenManagementService:
     enabled: true
     storage:
