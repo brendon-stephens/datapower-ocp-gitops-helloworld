@@ -5,10 +5,10 @@ metadata:
   namespace: openshift-gitops
 spec:
   project: default
-  sources:
-    - repoURL: https://github.com/brendon-stephens/datapower-ocp-gitops-helloworld.git
-      targetRevision: main
-      path: apiconnect/base
+  source:
+    repoURL: https://github.com/brendon-stephens/datapower-ocp-gitops-helloworld.git
+    targetRevision: main
+    path: apiconnect/base
   destination:
     server: https://kubernetes.default.svc
     namespace: datapower-gitops
