@@ -45,3 +45,8 @@ spec:
   adminUser:
     secretName: admin-secret
   mtlsValidateClient: true
+  additionalDomainConfig:
+  - name: "default"
+    dpApp:
+      config:
+      - "mgmt-config"
