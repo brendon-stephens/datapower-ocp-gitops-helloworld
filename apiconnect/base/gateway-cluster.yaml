@@ -36,7 +36,7 @@ spec:
   license:
     accept: true
     use: nonproduction
-    license: L-JVUW-LSTB9R
+    license: L-XSJQ-UMJP6P
   tokenManagementService:
     enabled: true
     storage:
