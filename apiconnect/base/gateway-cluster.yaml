@@ -10,7 +10,7 @@ metadata:
     apiconnect-operator/cp4i: "false"
 spec:
   version: 10.0.8.2-ifix2
-  profile: n3xc4.m8
+  profile: n1xc1.m8
   apicGatewayServiceV5CompatibilityMode: false
   mgmtPlatformEndpointCASecret:
     secretName: ingress-ca
