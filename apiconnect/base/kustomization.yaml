@@ -4,4 +4,4 @@ resources:
   - gateway-certificates.yaml
   - gateway-cluster.yaml
 
-  - cm-mgmt-config.yaml
+  #- cm-mgmt-config.yaml
